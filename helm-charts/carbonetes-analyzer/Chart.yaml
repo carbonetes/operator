@@ -1,0 +1,21 @@
+apiVersion: v2
+appVersion: 1.0.2
+description: Executes Carbonetes complete security analysis
+home: https://carbonetes.com
+icon: https://carbonetes.github.io/carbonetes-helm-chart/img/icon.png
+keywords:
+- security
+- analysis
+- docker
+- image
+- container
+- carbonetes
+- analyzer
+- vulnerabilities
+maintainers:
+- email: eng@carbonetes.com
+  name: Carbonetes
+name: carbonetes-analyzer
+sources:
+- https://github.com/carbonetes/carbonetes-analyzer
+version: 1.0.4

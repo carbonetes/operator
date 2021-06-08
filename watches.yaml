@@ -1,0 +1,6 @@
+# Use the 'create api' subcommand to add watches to this file.
+- group: charts.carbonetes.com
+  version: v1alpha1
+  kind: CarbonetesAnalyzer
+  chart: helm-charts/carbonetes-analyzer
+# +kubebuilder:scaffold:watch

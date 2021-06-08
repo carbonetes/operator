@@ -1,0 +1,24 @@
+# permissions for end users to edit carbonetesanalyzers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: carbonetesanalyzer-editor-role
+rules:
+- apiGroups:
+  - charts.carbonetes.com
+  resources:
+  - carbonetesanalyzers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - charts.carbonetes.com
+  resources:
+  - carbonetesanalyzers/status
+  verbs:
+  - get

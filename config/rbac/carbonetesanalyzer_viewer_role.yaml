@@ -1,0 +1,20 @@
+# permissions for end users to view carbonetesanalyzers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: carbonetesanalyzer-viewer-role
+rules:
+- apiGroups:
+  - charts.carbonetes.com
+  resources:
+  - carbonetesanalyzers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - charts.carbonetes.com
+  resources:
+  - carbonetesanalyzers/status
+  verbs:
+  - get

@@ -1,0 +1,56 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions: {}
+  description: Provides container security and vulnerability analysis
+  displayName: Carbonetes Operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - container
+  - image
+  - security
+  - analysis
+  - docker
+  - scan
+  - vulnerabilities
+  - dependencies
+  - sca
+  - malware
+  - licenses
+  - secrets
+  - bom
+  links:
+  - name: Operator
+    url: https://operator.domain
+  maintainers:
+  - email: eng@carbonetes.com
+    name: Carbonetes
+  - email: support@carbonetes.com
+    name: Support
+  maturity: alpha
+  provider:
+    name: Carbonetes
+    url: https://carbonetes.com
+  version: 0.0.0
