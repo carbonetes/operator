@@ -1,78 +1,45 @@
-apiVersion: anchore.com/v1alpha1
+apiVersion: charts.carbonetes.com/v1alpha1
 kind: CarbonetesAnalyzer
 metadata:
-  name: carbonetes-analyzer
+  name: carbonetesanalyzer-sample
 spec:
-  replicaCount: 1
-
-  carbonetesCreds:
-    username: "your_username"
-    password: "your_password"
-
-  # Enable this for debugging purposes
-  debugging:
-    enabled: false
-
-  image:
-    repository: carbonetes/carbonetes-analyzer:1.0.2
-    pullPolicy: Always
-
-  imagePullSecrets: []
-  nameOverride: ""
-  fullnameOverride: ""
-
-  serviceAccount:
-    create: true
-    annotations: {}
-    name: "carbonetes-analyzer"
-
-  podAnnotations: {}
-
-  podSecurityContext: {}
-    # fsGroup: 2000
-
-  securityContext: {}
-    # capabilities:
-    #   drop:
-    #   - ALL
-    # readOnlyRootFilesystem: true
-    # runAsNonRoot: true
-    # runAsUser: 1000
-
-  service:
-    type: ClusterIP
-    port: 3000
-
-  ingress:
-    enabled: false
-    annotations: {}
-      # kubernetes.io/ingress.class: nginx
-      # kubernetes.io/tls-acme: "true"
-    hosts:
-      - host: chart.local
-        paths: []
-    tls: []
-    #  - secretName: chart-tls
-    #    hosts:
-    #      - chart.local
-
-  resources: {}
-    # limits:
-    #   cpu: 100m
-    #   memory: 128Mi
-    # requests:
-    #   cpu: 100m
-    #   memory: 128Mi
-
+  affinity: {}
   autoscaling:
     enabled: false
-    minReplicas: 1
     maxReplicas: 100
+    minReplicas: 1
     targetCPUUtilizationPercentage: 80
-    # targetMemoryUtilizationPercentage: 80
-
+  # Set your valid Carbonetes credentials here
+  carbonetesCreds:
+    password: "your-username"
+    username: "your-password"
+  # Debugging purposes
+  debugging:
+    enabled: false
+  fullnameOverride: ""
+  image:
+    pullPolicy: Always
+    repository: carbonetes/carbonetes-analyzer:1.0.2
+  imagePullSecrets: []
+  ingress:
+    annotations: {}
+    enabled: false
+    hosts:
+    - host: chart.local
+      paths: []
+    tls: []
+  nameOverride: ""
   nodeSelector: {}
-
+  podAnnotations: {}
+  podSecurityContext: {}
+  replicaCount: 1
+  resources: {}
+  securityContext: {}
+  service:
+    port: 3000
+    type: ClusterIP
+  serviceAccount:
+    annotations: {}
+    create: true
+    name: carbonetes-analyzer
   tolerations: []
-
-  affinity: {}
