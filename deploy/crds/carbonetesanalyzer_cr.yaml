@@ -1,7 +1,7 @@
 apiVersion: charts.carbonetes.com/v1alpha1
 kind: CarbonetesAnalyzer
 metadata:
-  name: carbonetesanalyzer-sample
+  name: carbonetes-analyzer
 spec:
   affinity: {}
   autoscaling:

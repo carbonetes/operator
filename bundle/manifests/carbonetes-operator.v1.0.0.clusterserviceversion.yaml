@@ -127,7 +127,9 @@ spec:
   - secrets
   - bom
   links:
-  - name: Operator
+  - name: Carbonetes
+    url: https://carbonetes.com
+  - name: Carbonetes Analyzer
     url: https://carbonetes.github.io/carbonetes-helm-chart
   maintainers:
   - email: eng@carbonetes.com
