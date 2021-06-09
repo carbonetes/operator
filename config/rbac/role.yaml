@@ -1,5 +1,5 @@
 apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
+kind: Role
 metadata:
   name: carbonetes-operator
 rules:
@@ -34,17 +34,9 @@ rules:
 - apiGroups:
   - charts.carbonetes.com
   resources:
-  - carbonetesanalyzers
-  - carbonetesanalyzers/status
-  - carbonetesanalyzers/finalizers
+  - "*"
   verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
+  - "*"
 - verbs:
   - "*"
   apiGroups:

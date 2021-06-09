@@ -1,7 +1,7 @@
 apiVersion: charts.carbonetes.com/v1alpha1
 kind: CarbonetesAnalyzer
 metadata:
-  name: carbonetesanalyzer-sample
+  name: carbonetes-analyzer
 spec:
   # Default values copied from <project_dir>/helm-charts/carbonetes-analyzer/values.yaml
   affinity: {}
@@ -11,8 +11,8 @@ spec:
     minReplicas: 1
     targetCPUUtilizationPercentage: 80
   carbonetesCreds:
-    password: ""
-    username: ""
+    password: "Carbonetes2021!"
+    username: "QACarboTesting@gmail.com"
   debugging:
     enabled: false
   fullnameOverride: ""
